@@ -22,8 +22,6 @@ def ping():
 @app.post("/invocations")
 async def invoke(input_data:InputData):
     body= np.array(input_data.data)
-    # data=json.loads(body.decode("utf-8"))
-    # data=np.array(data)
     preds=model.predict(body)
     labels=[CLASS_NAMES[p] for p in preds]
     return {"prediction":labels}
