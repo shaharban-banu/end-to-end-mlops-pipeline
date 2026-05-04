@@ -24,7 +24,11 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-
+    - name: Debug Secrets
+      run: |
+        echo "Checking secrets..."
+        if [ -z "${{ secrets.AWS_ACCESS_KEY_ID }}" ]; then echo "ACCESS KEY EMPTY"; else echo "ACCESS KEY OK"; fi
+        if [ -z "${{ secrets.AWS_SECRET_ACCESS_KEY }}" ]; then echo "SECRET KEY EMPTY"; else echo "SECRET KEY OK"; fi
     # 🔐 Configure AWS credentials
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v2
