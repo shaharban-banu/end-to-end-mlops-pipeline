@@ -72,8 +72,7 @@ jobs:
 
         python <<EOF
         import boto3
-        import sagemaker
-        from sagemaker.session import Session
+        
 
         region = "${AWS_REGION}"
         role = "${SAGEMAKER_ROLE_ARN}"
