@@ -126,4 +126,11 @@ jobs:
             print("Creating new endpoint...")
 
         print("Deployment triggered 🚀")
+        print("Waiting for endpoint to be InService... ⏳")
+
+        sm.get_waiter('endpoint_in_service').wait(
+          EndpointName=endpoint_name
+        )
+
+        print("Endpoint is live ✅")
         EOF
