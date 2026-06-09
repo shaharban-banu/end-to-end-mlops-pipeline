@@ -1,12 +1,12 @@
-End-to-End MLOps Pipeline with FastAPI, Docker, AWS ECR, SageMaker and GitHub Actions
+# End-to-End MLOps Pipeline with FastAPI, Docker, AWS ECR, SageMaker and GitHub Actions
 
-Project Overview
+Project Overview :
 
 This project demonstrates an end-to-end MLOps pipeline for deploying a Machine Learning model using AWS cloud services and CI/CD automation.
 
 The pipeline trains an Iris flower classification model, packages it inside a Docker container with a FastAPI inference service, pushes the image to Amazon ECR, and automatically deploys it to Amazon SageMaker using GitHub Actions.
 
-Architecture
+Architecture :
 
 Developer
     │
@@ -26,7 +26,7 @@ GitHub Actions (CI/CD)
             ▼
       Live Inference Endpoint
 
-Tech Stack
+Tech Stack :
 
 Machine Learning
 Python
@@ -47,7 +47,7 @@ GitHub Actions
 Git
 GitHub
 
-Running the Project Locally
+Running the Project Locally :
 
 Install Dependencies
 pip install -r requirements.txt
